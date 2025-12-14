@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
-
+import { Toaster } from "@/components/ui/sonner";
 const outfit = Outfit({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -20,7 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${outfit.className} antialiased`}>{children}</body>
+      <body className={`${outfit.className} antialiased`}>
+        {children}
+        <Toaster />
+      </body>
     </html>
   );
 }
