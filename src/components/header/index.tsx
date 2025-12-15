@@ -1,7 +1,5 @@
 "use client";
 import Image from "next/image";
-import user_icon from "../../assets/user.png";
-import info_icon2 from "../../assets/bell.png";
 import { IoMdMenu } from "react-icons/io";
 import Link from "next/link";
 
@@ -31,24 +29,26 @@ export default function Header({ navOpened, setNavOpened }: any) {
                   2
                 </h3>
                 <div className="w-12 h-12 overflow-hidden">
-                  <Image
+                  Info
+                  {/* <Image
                     src={info_icon2}
                     alt="logo"
                     width={0}
                     height={0}
                     className="w-full h-full rounded-full "
-                  />
+                  /> */}
                 </div>
               </div>
             </Link>
             <div className="flex w-10 md:w-14 xl:w-auto flex-1 items-center gap-3 cursor-pointer">
-              <Image
+              User Logio
+              {/* <Image
                 src={user_icon}
                 alt="logo"
                 width={48}
                 height={48}
                 className="w-12 h-12 rounded-full "
-              />
+              /> */}
               <div className="text-white">
                 <h1 className="text-lg font-medium hidden xl:block">Dean</h1>
                 <h1 className="text-lg hidden xl:block">Admin</h1>

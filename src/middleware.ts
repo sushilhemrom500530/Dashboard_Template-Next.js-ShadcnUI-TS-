@@ -19,8 +19,8 @@ export function middleware(req: NextRequest) {
     // no token → redirect to login
     if (!token) {
       const loginUrl = req.nextUrl.clone();
-      loginUrl.pathname = "/auth/login";
-      return NextResponse.redirect(loginUrl);
+      // loginUrl.pathname = "/auth/login";
+      // return NextResponse.redirect(loginUrl);
     }
     // has token → redirect to dashboard
     else {
@@ -32,9 +32,9 @@ export function middleware(req: NextRequest) {
 
   // If visiting any protected route (e.g., dashboard) without token → redirect to login
   if (pathname.startsWith("/dashboard") && !token) {
-    const loginUrl = req.nextUrl.clone();
-    loginUrl.pathname = "/auth/login";
-    return NextResponse.redirect(loginUrl);
+    // const loginUrl = req.nextUrl.clone();
+    // loginUrl.pathname = "/auth/login";
+    // return NextResponse.redirect(loginUrl);
   }
 
   // Everything else → continue normally
